@@ -1,0 +1,3 @@
+C:/PhoneToSTLPro/native/build-android/CMakeFiles/phonetsl.dir
+C:/PhoneToSTLPro/native/build-android/CMakeFiles/edit_cache.dir
+C:/PhoneToSTLPro/native/build-android/CMakeFiles/rebuild_cache.dir

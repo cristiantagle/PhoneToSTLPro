@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\PhoneToSTLPro\native\build-test\CMakeFiles\cfeac0122d882cb4ea1dfd0480054a49\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{97D68320-3ABE-3730-A15C-FE22AAF5ECED}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

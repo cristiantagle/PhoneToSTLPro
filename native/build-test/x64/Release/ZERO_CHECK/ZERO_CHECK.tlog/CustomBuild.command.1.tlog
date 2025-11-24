@@ -1,0 +1,10 @@
+^C:\PHONETOSTLPRO\NATIVE\BUILD-TEST\CMAKEFILES\CFEAC0122D882CB4EA1DFD0480054A49\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/PhoneToSTLPro/native -BC:/PhoneToSTLPro/native/build-test --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/PhoneToSTLPro/native/build-test/PhoneToSTLProNative.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
