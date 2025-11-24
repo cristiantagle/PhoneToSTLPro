@@ -21,9 +21,9 @@ jobs:
           unzip -q android-ndk-r25c-linux.zip -d $HOME
           echo "ANDROID_NDK=$HOME/android-ndk-r25c" >> $GITHUB_ENV
 
-      - name: Clone Open3D (Android-capable tag v0.17.0)
+      - name: Clone Open3D (Android-capable tag v0.10.0)
         run: |
-          git clone --branch v0.17.0 --depth 1 https://github.com/isl-org/Open3D.git $HOME/Open3D
+          git clone --branch v0.10.0 --depth 1 https://github.com/isl-org/Open3D.git $HOME/Open3D
           ls $HOME/Open3D/util/android
 
       - name: Build Open3D Android arm64
