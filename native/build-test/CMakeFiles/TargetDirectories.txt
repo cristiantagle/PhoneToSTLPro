@@ -1,3 +1,0 @@
-C:/PhoneToSTLPro/native/build-test/CMakeFiles/phonetsl.dir
-C:/PhoneToSTLPro/native/build-test/CMakeFiles/ALL_BUILD.dir
-C:/PhoneToSTLPro/native/build-test/CMakeFiles/ZERO_CHECK.dir

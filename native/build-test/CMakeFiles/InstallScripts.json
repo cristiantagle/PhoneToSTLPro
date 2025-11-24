@@ -1,7 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"C:/PhoneToSTLPro/native/build-test/cmake_install.cmake"
-	],
-	"Parallel" : false
-}
