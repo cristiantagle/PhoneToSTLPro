@@ -7,18 +7,24 @@
 - Librerías: Open3D (sin CUDA), libigl (header-only), Eigen (header-only).
 
 ## Android (NDK)
-1) Construir Open3D para Android (armeabi-v7a/arm64-v8a) con CMake/NDK. Ejemplo (ajusta rutas):
+1) Open3D se compiló en WSL2 (Ubuntu) con NDK r25c y CMake, sin GUI/VTK/TBB (stubbed para Android). Binario resultante:
+   - `C:\Users\CrisDyl\Open3D\build-android\lib\Release\libOpen3D.so`
+2) Copia para Unity ya hecha:
+   - `unity/Assets/Plugins/Android/libOpen3D.so` (ABI arm64). En el Inspector de Unity marcar Plataforma Android y ARM64.
+3) Si hay que reconstruir Open3D:
 ```
-cmake -S /path/to/Open3D -B build-android \
+cmake -S /mnt/c/Users/CrisDyl/Open3D -B /mnt/c/Users/CrisDyl/Open3D/build-android \
   -DANDROID_ABI=arm64-v8a \
   -DANDROID_PLATFORM=android-24 \
   -DANDROID_NDK=$ANDROID_NDK_ROOT \
   -DCMAKE_TOOLCHAIN_FILE=$ANDROID_NDK_ROOT/build/cmake/android.toolchain.cmake \
-  -DBUILD_SHARED_LIBS=OFF -DBUILD_GUI=OFF -DBUILD_WEBRTC=OFF
-cmake --build build-android --config Release
+  -DBUILD_SHARED_LIBS=ON -DBUILD_GUI=OFF -DBUILD_WEBRTC=OFF -DBUILD_PYTHON_MODULE=OFF \
+  -DBUILD_VISUALIZATION=OFF -DBUILD_EXAMPLES=OFF -DUSE_BLAS=ON -DBUILD_ISPC_MODULE=OFF \
+  -G Ninja
+cmake --build /mnt/c/Users/CrisDyl/Open3D/build-android --config Release
 ```
-2) Ajustar `native/CMakeLists.txt` con `OPEN3D_ROOT` y `Eigen3`.
-3) Generar `.so` y empaquetar en AAR (carpeta `Assets/Plugins/Android/` en Unity).
+   Copiar el nuevo `.so` a `unity/Assets/Plugins/Android/`.
+4) El repo de Open3D quedó con los stubs y el commit: `android: habilitar build headless sin TBB/VTK`.
 
 ## iOS
 1) Construir Open3D para iOS (arm64):
